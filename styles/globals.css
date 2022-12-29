@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  direction: rtl;
 }
 
 a {
@@ -20,7 +24,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: #f4f4f4;
     background: black;
   }
 }

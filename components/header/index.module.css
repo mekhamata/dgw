@@ -1,0 +1,54 @@
+.headerRow {
+  display: flex;
+  /* background-color: red; */
+  justify-content: center;
+}
+.headerContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1110px;
+  min-height: 68px;
+  /* background-color: green; */
+}
+.webLogo {
+  display: flex;
+  height: 68px;
+  align-items: center;
+  flex: 0.5;
+}
+.menuContainer {
+  display: flex;
+  flex: 2;
+  align-items: center;
+}
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Big screen devices2 (930px and above) */
+@media only screen and (min-width: 930px) {
+}
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* common mikha */
+@media only screen and (max-width: 991px) {
+}
+
+/* Small screen devices (992px and above) */
+@media only screen and (min-width: 992px) {
+}

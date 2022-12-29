@@ -1,0 +1,75 @@
+.footerContainer {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footerDiv {
+  display: flex;
+  width: 100%;
+  max-width: 1160px;
+  justify-content: center;
+}
+.footerMenu {
+  display: flex;
+  width: 100%;
+}
+.footerMenuItemContainer {
+  display: flex;
+  flex: 1;
+  padding-inline-start: 25px;
+  padding-inline-end: 25px;
+  flex-direction: column;
+}
+/* .footerMenuItemTitle {
+  flex: 1;
+} */
+/* .footerMenuItemList {
+  color: #133241;
+} */
+.dgwFooter {
+  background-color: #133140;
+  min-height: 50px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .footerMenu {
+    flex-direction: column;
+  }
+  .footerMenuItemContainer {
+    padding: 0;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Big screen devices2 (930px and above) */
+@media only screen and (min-width: 930px) {
+}
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* common mikha */
+@media only screen and (max-width: 991px) {
+}
+
+/* Small screen devices (992px and above) */
+@media only screen and (min-width: 992px) {
+}

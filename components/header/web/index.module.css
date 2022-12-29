@@ -1,0 +1,77 @@
+.webLogo {
+  display: flex;
+  height: 68px;
+  align-items: center;
+  flex: 0.5;
+}
+.webHeaderContainer {
+  display: flex;
+  flex: 1;
+}
+.menuContainer {
+  flex: 2;
+}
+.menuContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+}
+.menuContainer ul li {
+  /* background-color: pink; */
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.navlink {
+  color: rgb(2 132 199);
+  text-decoration: none;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+}
+.navlink__active,
+.navlink:hover {
+  color: rgb(56 189 248);
+  font-size: 18px;
+  /* border-bottom: 2px solid #03e3fa; */
+}
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .webHeaderContainer {
+    display: none;
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Big screen devices2 (930px and above) */
+@media only screen and (min-width: 930px) {
+}
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* common mikha */
+@media only screen and (max-width: 991px) {
+}
+
+/* Small screen devices (992px and above) */
+@media only screen and (min-width: 992px) {
+}

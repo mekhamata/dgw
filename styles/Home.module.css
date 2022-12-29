@@ -1,129 +1,225 @@
-.container {
-  padding: 0 2rem;
+.homeWelcome {
+  display: flex;
+  flex: 1;
+  margin-top: 30px;
 }
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
+.homeWelcome_top {
+  width: 100%;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(56 189 248);
+}
+.homeWelcome_bottom {
+  width: 100%;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(56 189 248);
+}
+.bottomIcon {
+  /* font-size: 50px; */
+  margin-inline-end: 5px;
+  color: #c6e446;
+}
+.homeWelcome_text {
   flex: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+}
+.homeWelcome_img {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.footer {
+.homeWelcomeRealText {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
-
-.footer a {
+.homeWelcome_text_a {
+  width: 100%;
+  flex: 1;
+  font-size: 50px;
+  font-weight: bold;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  justify-content: flex-start;
+  color: rgb(2 132 199);
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.homeWelcome_text_b {
+  width: 100%;
+  flex: 5;
+  /* font-size: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: rgb(56 189 248);
+  font-weight: 900;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.homeWelcome_text_c {
+  width: 100%;
+  flex: 1;
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(2 132 199);
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.whatWeDoContainer {
+  background-color: #133140;
+  /* min-height: 300px; */
+  /* border-top: 5px solid red; */
+  border-left-width: 0;
+  border-right-width: 0;
+  /* border-image: linear-gradient(to right, #03e2f9, #046aa5, #03e2f9) 1 stretch; */
 }
-
-.grid {
+/* .whatWeDoContainer_in {
+  background-image: url('../public/ab_line.png');
+  background-size: 100%;
+  background-position: center top;
+} */
+.whatWeDo {
+  display: flex;
+  flex: 1;
+  /* background-color: green; */
+  /* min-height: 300px; */
+  color: white;
+  flex-direction: column;
+  opacity: 1;
+}
+.waveContainer {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.whatWeDoItemsContainer {
+  display: flex;
+}
+.whatWeDoItemsContainer ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+}
+.whatWeDoItemsContainer ul li {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.whatWeDoItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  border-radius: 5px;
+  border: 1px dashed #c6e446;
+  padding: 5px;
 }
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.whatWeDoItem svg {
+  display: flex;
+  flex: 1;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.whatWeDoItem div {
+  flex: 3;
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+/* @keyframes animateWave {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
-
-.card p {
+.waveContainer > svg {
+  display: block;
+  transform-origin: bottom;
+  animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} */
+.sectionDarkTitle {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sectionDarkTitle h2 {
+  padding: 0;
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-weight: normal;
+  font-size: 30px;
+  border-bottom: 3px solid #c6e446;
+  display: inline-block;
+}
+.homeContactText {
+  display: flex;
+  flex: 3;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: justify;
+}
+.homeContactButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+@media only screen and (max-width: 595px) {
+  .homeWelcome_img {
+    display: none;
+  }
+  /* .homeWelcome_text_b {
+    font-size: 40px;
+  } */
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Big screen devices2 (930px and above) */
+@media only screen and (min-width: 930px) {
+}
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* common mikha */
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 595px) {
+  .centerHomeContactContainer {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .homeContactText {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+/* Small screen devices (992px and above) */
+@media only screen and (min-width: 992px) {
 }
