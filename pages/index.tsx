@@ -8,6 +8,7 @@ import NavLink from '../components/NavLink';
 // import BuildingsFinal from '../public/buildingsfinal.svg';
 import Lottie from 'lottie-react';
 import CodingLot from '../public/coding.json';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 // export default function Home() {
 const Home = () => {
   const defaultOptions = {
@@ -80,11 +81,12 @@ const Home = () => {
             </div>
             <div className={styles.homeWelcome_img}>
               <Slide triggerOnce={true}>
-                <Lottie
+                {/* <Lottie
                   animationData={CodingLot}
                   loop={true}
                   rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
-                />
+                /> */}
+                <Player autoplay loop src={CodingLot}></Player>
                 {/* <Image
                   alt='page cover'
                   src='/airplane-travel-svgrepo-com.svg'
