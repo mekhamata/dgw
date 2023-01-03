@@ -17,7 +17,7 @@ const nextConfig = {
     return config;
   },
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
 };
 
 module.exports = nextConfig;
