@@ -1,0 +1,116 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutImage {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.whatWeDo {
+  display: flex;
+  flex: 1;
+  /* background-color: green; */
+  /* min-height: 300px; */
+  color: white;
+  flex-direction: column;
+  opacity: 1;
+}
+.waveContainer {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.sectionDarkTitle {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sectionDarkTitle h2,
+.sectionDarkTitle h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 30px;
+  border-bottom: 3px solid #c6e446;
+  display: inline-block;
+}
+.contactContainer {
+  display: flex;
+  margin-top: 30px;
+}
+.contactText {
+  flex: 1;
+  padding: 10px;
+  border-inline-end: 2.5px solid white;
+  text-align: start;
+  display: flex;
+}
+.contactText ul {
+  padding: 0;
+  margin: 0;
+}
+.contactText ul li {
+  margin-bottom: 10px;
+}
+.contactLinks {
+  color: white;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.contactLinks:hover {
+  color: #c6e446;
+}
+.contactLinksIcons {
+  margin-inline-end: 5px;
+}
+.contactForm {
+  flex: 1;
+  display: flex;
+  text-align: start;
+  padding: 10px;
+  border-inline-start: 2.5px solid white;
+}
+.contactForm form {
+  flex: 1;
+}
+
+/* Small screen devices (992px and above) */
+@media only screen and (min-width: 992px) {
+}
+/* common mikha */
+@media only screen and (max-width: 991px) {
+}
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+}
+/* Medium screen devices (767px and under) */
+@media only screen and (max-width: 767px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+  .contactText {
+    border: 0;
+    border-bottom: 2.5px solid white;
+  }
+  .contactForm {
+    border: 0;
+    border-top: 2.5px solid white;
+  }
+}
+@media only screen and (max-width: 595px) {
+}
+@media only screen and (min-width: 596px) {
+}

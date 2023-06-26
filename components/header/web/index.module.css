@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 68px;
+  min-height: 68px;
 }
 .menuContainer ul li {
   /* background-color: pink; */
@@ -42,15 +42,45 @@
   font-size: 18px;
   /* border-bottom: 2px solid #03e3fa; */
 }
+
+.burger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.menuDisplayFlex {
+  display: flex !important;
+}
+
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
+  .webLogo {
+    padding: 10px;
+  }
   .webHeaderContainer {
+    flex-direction: column;
+  }
+  .webHeaderContainer ul {
     display: none;
+    flex-direction: column;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-bottom: 10px;
   }
 }
 
 /* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 596px) {
+  .burger {
+    display: none;
+  }
 }
 
 /* Medium screen devices (768px and above) */

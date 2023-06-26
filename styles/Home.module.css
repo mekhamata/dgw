@@ -152,7 +152,8 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.sectionDarkTitle h2 {
+.sectionDarkTitle h2,
+.sectionDarkTitle h1 {
   padding: 0;
   margin: 0;
   font-weight: normal;

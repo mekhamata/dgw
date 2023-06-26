@@ -2,6 +2,16 @@
   display: flex;
   /* background-color: red; */
   justify-content: center;
+  background-color: white;
+}
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  animation: appear linear 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border-bottom: 2px solid #133140;
+  z-index: 2;
 }
 .headerContainer {
   display: flex;
@@ -51,4 +61,13 @@
 
 /* Small screen devices (992px and above) */
 @media only screen and (min-width: 992px) {
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

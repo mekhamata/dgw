@@ -182,7 +182,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className={styles.footerMenuItemContainer}>
+          {/* <div className={styles.footerMenuItemContainer}>
             <div
               className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
             >
@@ -323,7 +323,7 @@ const Footer = () => {
                 </div>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={`${styles.dgwFooter} text-white text-base`}>

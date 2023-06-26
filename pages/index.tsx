@@ -11,14 +11,6 @@ import CodingLot from "../public/coding.json";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 // export default function Home() {
 const Home = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    path: CodingLot,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   return (
     <div className={styles.container}>
       <Head>
@@ -131,7 +123,7 @@ const Home = () => {
                 <ContainerCom>
                   <div className={styles.whatWeDo}>
                     <div className={styles.sectionDarkTitle}>
-                      <h2>מי אנחנו?</h2>
+                      <h1>מי אנחנו?</h1>
                     </div>
                     <div className={`${styles.whatWeDoItemsContainer}`}>
                       <div className="text-white lg:text-2xl md:text-s">
@@ -399,7 +391,7 @@ const Home = () => {
                       שנותנים את המיטב עבורך.
                     </div>
                     <div className={`${styles.homeContactButton}`}>
-                      <NavLink href="/3" className="" activeClassName="">
+                      <NavLink href="/contact" className="" activeClassName="">
                         <button className="bg-sky-900 hover:bg-sky-500 text-white font-bold py-2 px-4 border-b-4 border-sky-500 hover:border-sky-900 rounded">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
