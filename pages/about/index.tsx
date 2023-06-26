@@ -50,7 +50,11 @@ const About = () => {
         </svg>
         <div
           className={styles.container}
-          style={{ background: "#133140", paddingBottom: `12%` }}
+          style={{
+            background: "#133140",
+            paddingBottom: `12%`,
+            marginTop: `-2px`,
+          }}
         >
           <main>
             <Fade>
