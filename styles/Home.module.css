@@ -1,3 +1,6 @@
+.container {
+  padding: 0 2rem;
+}
 .homeWelcome {
   display: flex;
   flex: 1;

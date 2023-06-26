@@ -7,139 +7,92 @@ const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.footerDiv}>
-        <div className={styles.footerMenu}>
-          <div className={`${styles.footerMenuItemContainer}`}>
-            <div className="hidden sm:block">
-              <div
-                className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
-              >
-                מי אנחנו
-              </div>
-              <div className={`${styles.footerMenuItemList} text-sky-900`}>
-                סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט -
-                לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה.
-                לפמעט מוסן מנת. קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח.
-                עמחליף נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר
-                מודוף.
-              </div>
-              <div className={`${styles.footerMenuItemList} text-sky-900`}>
-                <ul className="flex align-center justify-start gap-2 mt-2">
-                  <li>
-                    <NavLink
-                      href="/"
-                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
-                    >
-                      <IconComponent
-                        name="square-facebook"
-                        type="fab"
-                        className="text-3xl"
-                      />
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      href="/1"
-                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
-                    >
-                      <IconComponent
-                        name="square-instagram"
-                        type="fab"
-                        className="text-3xl"
-                      />
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      href="/1"
-                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
-                    >
-                      <IconComponent
-                        name="square-whatsapp"
-                        type="fab"
-                        className="text-3xl"
-                      />
-                    </NavLink>
-                  </li>
-                </ul>
+        <div className={styles.container}>
+          <div className={styles.footerMenu}>
+            <div className={`${styles.footerMenuItemContainer}`}>
+              <div className="hidden sm:block">
+                <div
+                  className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
+                >
+                  מי אנחנו
+                </div>
+                <div className={`${styles.footerMenuItemList} text-sky-900`}>
+                  סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט -
+                  לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה.
+                  לפמעט מוסן מנת. קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח.
+                  עמחליף נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר
+                  מודוף.
+                </div>
+                <div className={`${styles.footerMenuItemList} text-sky-900`}>
+                  <ul className="flex align-center justify-start gap-2 mt-2">
+                    <li>
+                      <NavLink
+                        href="/"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName="text-sky-500"
+                      >
+                        <IconComponent
+                          name="square-facebook"
+                          type="fab"
+                          className="text-3xl"
+                        />
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/1"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName="text-sky-500"
+                      >
+                        <IconComponent
+                          name="square-instagram"
+                          type="fab"
+                          className="text-3xl"
+                        />
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/1"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName="text-sky-500"
+                      >
+                        <IconComponent
+                          name="square-whatsapp"
+                          type="fab"
+                          className="text-3xl"
+                        />
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className={styles.footerMenuItemContainer}>
-            <div
-              className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
-            >
-              מפת החברה
-            </div>
-            <div className={`${styles.footerMenuItemList}`}>
-              <ul>
-                <li>
-                  <NavLink
-                    href="/"
-                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName=""
-                  >
-                    ראשי
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    href="/about"
-                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName=""
-                  >
-                    אודות
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    href="/services"
-                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName=""
-                  >
-                    שירותים
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    href=""
-                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName=""
-                  >
-                    דרושים
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    href="/contact"
-                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName=""
-                  >
-                    צור קשר
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={styles.footerMenuItemContainer}>
-            <div className="hidden sm:block">
+            <div className={styles.footerMenuItemContainer}>
               <div
                 className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
               >
-                שירותים
+                מפת החברה
               </div>
               <div className={`${styles.footerMenuItemList}`}>
                 <ul>
                   <li>
                     <NavLink
-                      href="/services"
+                      href="/"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
                       activeClassName=""
                     >
-                      בניית אתרים
+                      ראשי
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      href="/about"
+                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                      activeClassName=""
+                    >
+                      אודות
                     </NavLink>
                   </li>
                   <li>
@@ -148,50 +101,98 @@ const Footer = () => {
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
                       activeClassName=""
                     >
-                      בניית חנות מסחרית
+                      שירותים
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      href="/services"
+                      href=""
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
                       activeClassName=""
                     >
-                      עיצוב אתרים
+                      דרושים
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      href="/services"
+                      href="/contact"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
                       activeClassName=""
                     >
-                      אחסון אתרים
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      href="/services"
-                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName=""
-                    >
-                      מיתוג עסקי
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      href="/services"
-                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName=""
-                    >
-                      אופטימיזציה SEO
+                      צור קשר
                     </NavLink>
                   </li>
                 </ul>
               </div>
             </div>
-          </div>
-          {/* <div className={styles.footerMenuItemContainer}>
+            <div className={styles.footerMenuItemContainer}>
+              <div className="hidden sm:block">
+                <div
+                  className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
+                >
+                  שירותים
+                </div>
+                <div className={`${styles.footerMenuItemList}`}>
+                  <ul>
+                    <li>
+                      <NavLink
+                        href="/services"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName=""
+                      >
+                        בניית אתרים
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/services"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName=""
+                      >
+                        בניית חנות מסחרית
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/services"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName=""
+                      >
+                        עיצוב אתרים
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/services"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName=""
+                      >
+                        אחסון אתרים
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/services"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName=""
+                      >
+                        מיתוג עסקי
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        href="/services"
+                        className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                        activeClassName=""
+                      >
+                        אופטימיזציה SEO
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* <div className={styles.footerMenuItemContainer}>
             <div
               className={`${styles.footerMenuItemTitle} text-sky-900 text-xl border-b-2 border-sky-500 my-1`}
             >
@@ -333,6 +334,7 @@ const Footer = () => {
               </form>
             </div>
           </div> */}
+          </div>
         </div>
       </div>
       <div className={`${styles.dgwFooter} text-white text-base`}>

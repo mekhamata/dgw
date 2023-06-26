@@ -54,9 +54,6 @@
   margin: 5px;
   transition: all 0.3s ease;
 }
-.menuDisplayFlex {
-  display: flex !important;
-}
 
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
@@ -73,6 +70,19 @@
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
     padding-bottom: 10px;
+  }
+  .menuDisplayFlex {
+    display: flex !important;
+    padding: 0 2rem !important;
+  }
+  .menuDisplayFlex li {
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 1px solid #133140;
+    padding: 10px;
+  }
+  .menuDisplayFlex li:last-child {
+    border: 0;
   }
 }
 
