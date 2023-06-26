@@ -82,10 +82,7 @@ const Contact = () => {
       ) {
         console.log("valid subject");
       } else {
-        notify(
-          `הנושא יכול להכיל אותיות בעברית, בלועזית. אין להכיל:  ,.?:@()[]-_`,
-          "error"
-        );
+        notify(`הנושא יכול להכיל אותיות בעברית, בלועזית.`, "error");
         setSendStatus(false);
         return;
       }
@@ -93,18 +90,15 @@ const Contact = () => {
     ///
     if (
       validator.isAlphanumeric(message, "he", {
-        ignore: " ,.?:@()[]-_",
+        ignore: ` ,.?:@()[]-_(\r\n|\r|\n)`,
       }) ||
       validator.isAlphanumeric(message, "en-US", {
-        ignore: " ,.?:@()[]-_",
+        ignore: ` ,.?:@()[]-_(\r\n|\r|\n)`,
       })
     ) {
       console.log("valid message");
     } else {
-      notify(
-        `ההודעה יכולה להכיל אותיות בעברית, בלועזית. אין להכיל:  ,.?:@()[]-_`,
-        "error"
-      );
+      notify(`ההודעה יכולה להכיל אותיות בעברית, בלועזית.`, "error");
       setSendStatus(false);
       return;
     }
