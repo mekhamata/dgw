@@ -6,9 +6,141 @@ import ContactImage from "../../components/svgs/ContactImage";
 import { Slide, Fade } from "react-awesome-reveal";
 import IconComponent from "../../components/iconComponent";
 import NavLink from "../../components/NavLink";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import validator from "validator";
 
 // export default function Home() {
 const Contact = () => {
+  const notify = (msg: string, type: string) => {
+    toast.dismiss();
+    if (type === "success") {
+      return toast.success(
+        <div style={{ textAlign: "center", direction: "rtl" }}>{msg}</div>,
+        {
+          theme: "colored",
+        }
+      );
+    } else {
+      return toast.error(
+        <div style={{ textAlign: "center", direction: "rtl" }}>{msg}</div>,
+        {
+          theme: "colored",
+        }
+      );
+    }
+  };
+  const [from_email, setFromEmail] = useState("");
+  const [full_name, setFull_name] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [phone, setPhone] = useState("");
+  const [sendStatus, setSendStatus] = useState(false);
+  const sendForm = () => {
+    setSendStatus(true);
+    if (
+      validator.isAlpha(full_name, "he", {
+        ignore: " ",
+      }) ||
+      validator.isAlpha(full_name, "en-US", {
+        ignore: " ",
+      })
+    ) {
+      console.log("valid name");
+    } else {
+      notify(`השם מכיל אותיות בעברית או בלועזית בלבד!`, "error");
+      setSendStatus(false);
+      return;
+    }
+    ////
+    if (validator.isEmail(from_email)) {
+      console.log("valid email");
+    } else {
+      // alert("Enter valid Email!");
+      notify(`הדוא"ל אינו תקין!`, "error");
+      setSendStatus(false);
+      return;
+    }
+    ///
+    if (validator.isMobilePhone(phone, ["he-IL"])) {
+      console.log("valid phone");
+    } else {
+      notify(`הטלפון צריך להיות ישראלי מ 10 ספרות!`, "error");
+      setSendStatus(false);
+      return;
+    }
+    ///
+    if (subject.trim() != "") {
+      if (
+        validator.isAlphanumeric(subject, "he", {
+          ignore: " ,.?:@()[]-_",
+        }) ||
+        validator.isAlphanumeric(subject, "en-US", {
+          ignore: " ,.?:@()[]-_",
+        })
+      ) {
+        console.log("valid subject");
+      } else {
+        notify(
+          `הנושא יכול להכיל אותיות בעברית, בלועזית. אין להכיל:  ,.?:@()[]-_`,
+          "error"
+        );
+        setSendStatus(false);
+        return;
+      }
+    }
+    ///
+    if (
+      validator.isAlphanumeric(message, "he", {
+        ignore: " ,.?:@()[]-_",
+      }) ||
+      validator.isAlphanumeric(message, "en-US", {
+        ignore: " ,.?:@()[]-_",
+      })
+    ) {
+      console.log("valid message");
+    } else {
+      notify(
+        `ההודעה יכולה להכיל אותיות בעברית, בלועזית. אין להכיל:  ,.?:@()[]-_`,
+        "error"
+      );
+      setSendStatus(false);
+      return;
+    }
+
+    var templateParams = {
+      from_name: full_name,
+      to_name: "mikha matta",
+      message: message,
+      subject: subject,
+      from_email: from_email,
+      phone: phone,
+    };
+
+    emailjs
+      .send(
+        "service_y0z1qup",
+        "template_dm1k45s",
+        templateParams,
+        "y9eqDlIW1ZnKzAxVt"
+      )
+      .then(
+        function (response) {
+          notify(`קיבלנו את הפניה שלך! נחזור אליך בהקדם אפשרי.`, "success");
+          setFromEmail("");
+          setFull_name("");
+          setPhone("");
+          setSubject("");
+          setMessage("");
+          setSendStatus(false);
+        },
+        function (error) {
+          setSendStatus(false);
+          notify(`בעיה בשליחת הטופס, נא להתקשר טלפונית.`, "error");
+        }
+      );
+  };
   return (
     <>
       <Head>
@@ -176,6 +308,8 @@ const Contact = () => {
                             type="text"
                             className="bg-gray-50 border border-gray-300 text-sky-900 text-sm rounded-lg focus:ring-sky-900 focus:border-sky-900 block w-full pr-10 p-2.5  border-sky-900 placeholder-gray-400 focus:ring-sky-900 focus:border-sky-900"
                             placeholder="שמך המלא/ שם החברה"
+                            onChange={(e) => setFull_name(e.target.value)}
+                            value={full_name}
                           />
                         </div>
 
@@ -202,7 +336,37 @@ const Contact = () => {
                           <input
                             type="email"
                             className="bg-gray-50 border border-gray-300 text-sky-900 text-sm rounded-lg focus:ring-sky-900 focus:border-sky-900 block w-full pr-10 p-2.5  border-sky-900 placeholder-gray-400 focus:ring-sky-900 focus:border-sky-900"
-                            placeholder="name@flowbite.com"
+                            placeholder="name@example.com"
+                            onChange={(e) => setFromEmail(e.target.value)}
+                            value={from_email}
+                          />
+                        </div>
+                        <label
+                          htmlFor="phone"
+                          className="text-white font-light mt-2"
+                        >
+                          טלפון
+                          <span className="text-red-500">*</span>
+                        </label>
+                        <div className="relative">
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                            <svg
+                              aria-hidden="true"
+                              className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                              fill="currentColor"
+                              viewBox="0 0 512 512"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              {/*! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
+                              <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                            </svg>
+                          </div>
+                          <input
+                            type="email"
+                            className="bg-gray-50 border border-gray-300 text-sky-900 text-sm rounded-lg focus:ring-sky-900 focus:border-sky-900 block w-full pr-10 p-2.5  border-sky-900 placeholder-gray-400 focus:ring-sky-900 focus:border-sky-900"
+                            placeholder="050xxxxxxx"
+                            onChange={(e) => setPhone(e.target.value)}
+                            value={phone}
                           />
                         </div>
 
@@ -211,7 +375,6 @@ const Contact = () => {
                           className="text-white font-light mt-2"
                         >
                           נושא
-                          <span className="text-red-500">*</span>
                         </label>
                         <div className="relative">
                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
@@ -235,6 +398,8 @@ const Contact = () => {
                             type="text"
                             className="bg-gray-50 border border-gray-300 text-sky-900 text-sm rounded-lg focus:ring-sky-900 focus:border-sky-900 block w-full pr-10 p-2.5  border-sky-900 placeholder-gray-400 focus:ring-sky-900 focus:border-sky-900"
                             placeholder="נושא..."
+                            onChange={(e) => setSubject(e.target.value)}
+                            value={subject}
                           />
                         </div>
 
@@ -267,11 +432,24 @@ const Contact = () => {
                             rows={4}
                             className="bg-gray-50 border border-gray-300 text-sky-900 text-sm rounded-lg focus:ring-sky-900 focus:border-sky-900 block w-full pr-10 p-2.5  border-sky-900 placeholder-gray-400 focus:ring-sky-900 focus:border-sky-900"
                             placeholder="השאירו הודעה..."
+                            onChange={(e) => setMessage(e.target.value)}
+                            value={message}
                           ></textarea>
                         </div>
 
                         <div className="flex flex-row items-center justify-start mt-3">
-                          <button className="bg-sky-900 hover:bg-sky-500 text-white font-bold py-2 px-4 border-b-4 border-sky-500 hover:border-sky-900 rounded">
+                          <button
+                            type="button"
+                            disabled={sendStatus}
+                            onClick={() => {
+                              sendForm();
+                            }}
+                            className={`${
+                              !sendStatus
+                                ? "bg-sky-900 hover:bg-sky-500 hover:border-sky-900 border-sky-500"
+                                : "bg-red-400 hover:border-red-400 border-red-400"
+                            }  text-white font-bold py-2 px-4 border-b-4   rounded`}
+                          >
                             שלח/י
                           </button>
                         </div>

@@ -80,45 +80,45 @@ const Footer = () => {
                   <NavLink
                     href="/"
                     className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName="text-sky-500"
+                    activeClassName=""
                   >
                     ראשי
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    href="/1"
+                    href="/about"
                     className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName="text-sky-500"
+                    activeClassName=""
                   >
-                    ראשי
+                    אודות
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    href=""
+                    href="/services"
                     className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName="text-sky-500"
+                    activeClassName=""
                   >
-                    ראשי
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    href=""
-                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName="text-sky-500"
-                  >
-                    ראשי
+                    שירותים
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     href=""
                     className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                    activeClassName="text-sky-500"
+                    activeClassName=""
                   >
-                    ראשי
+                    דרושים
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    href="/contact"
+                    className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                    activeClassName=""
+                  >
+                    צור קשר
                   </NavLink>
                 </li>
               </ul>
@@ -135,47 +135,56 @@ const Footer = () => {
                 <ul>
                   <li>
                     <NavLink
-                      href="/"
+                      href="/services"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
+                      activeClassName=""
                     >
-                      ראשי
+                      בניית אתרים
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      href="/1"
+                      href="/services"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
+                      activeClassName=""
                     >
-                      ראשי
+                      בניית חנות מסחרית
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      href=""
+                      href="/services"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
+                      activeClassName=""
                     >
-                      ראשי
+                      עיצוב אתרים
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      href=""
+                      href="/services"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
+                      activeClassName=""
                     >
-                      ראשי
+                      אחסון אתרים
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      href=""
+                      href="/services"
                       className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
-                      activeClassName="text-sky-500"
+                      activeClassName=""
                     >
-                      ראשי
+                      מיתוג עסקי
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      href="/services"
+                      className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
+                      activeClassName=""
+                    >
+                      אופטימיזציה SEO
                     </NavLink>
                   </li>
                 </ul>
