@@ -338,7 +338,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={`${styles.dgwFooter} text-white text-base`}>
-        powered by mikha
+        All Rights Reserved | <span>DGW © 2023</span>
       </div>
     </footer>
   );

@@ -33,6 +33,7 @@
   color: #133241;
 } */
 .dgwFooter {
+  direction: ltr;
   background-color: #133140;
   min-height: 50px;
   display: flex;
@@ -40,6 +41,9 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+}
+.dgwFooter span {
+  font-weight: bold;
 }
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
