@@ -10,13 +10,15 @@ const WebHeader = () => {
   return (
     <div className={styles.webHeaderContainer}>
       <div className={styles.webLogo}>
-        <Image
-          alt="page cover"
-          src="/logo3.png"
-          width={192}
-          height={50}
-          objectFit="scale-down"
-        />
+        <NavLink href="/" className="" activeClassName="">
+          <Image
+            alt="page cover"
+            src="/logo3.png"
+            width={192}
+            height={50}
+            objectFit="scale-down"
+          />
+        </NavLink>
       </div>
       <div className={styles.menuContainer}>
         <nav>
