@@ -172,6 +172,7 @@
 }
 /* common mikha */
 @media only screen and (max-width: 991px) {
+  .cardsList li,
   .technoList li {
     flex: 1 0 33%;
   }
@@ -187,6 +188,7 @@
 }
 /* Medium screen devices (767px and under) */
 @media only screen and (max-width: 767px) {
+  .cardsList li,
   .technoList li {
     flex: 1 0 50%;
   }
