@@ -60,7 +60,7 @@ const WebHeader = () => {
                 href="/contact"
                 className="text-sky-900 hover:text-sky-500 transition duration-300 ease-in-out"
                 activeClassName="text-xl text-sky-500"
-                title="צור קשר"
+                title="צרו קשר"
               />
             </li>
           </ul>
