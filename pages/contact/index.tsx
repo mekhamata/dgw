@@ -117,7 +117,7 @@ const Contact = () => {
         "service_y0z1qup",
         "template_dm1k45s",
         templateParams,
-        "y9eqDlIW1ZnKzAxVt"
+        `${process.env.NEXT_PUBLIC_EMAILJS_PRIVATE}`
       )
       .then(
         function (response) {
