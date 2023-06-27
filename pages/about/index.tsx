@@ -65,18 +65,20 @@ const About = () => {
                   </div>
                   <div className={`${styles.whatWeDoItemsContainer}`}>
                     <div className="text-white lg:text-2xl md:text-s">
-                      סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט
-                      ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום
-                      בלינך רוגצה. לפמעט מוסן מנת. קולורס מונפרד אדנדום סילקוף,
-                      מרגשי ומרגשח. עמחליף נולום ארווס סאפיאן - פוסיליס קוויס,
-                      אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר, בנפת
-                      נפקט למסון בלרק - וענוף לפרומי בלוף קינץ תתיח לרעח. לת
-                      צשחמי לורם איפסום דולור סיט אמט, נולום ארווס סאפיאן -
-                      פוסיליס קוויס, אקווזמן קוואזי במר מודוף. אודיפו בלאסטיק
-                      מונופץ קליר, בנפת נפקט למסון בלרק - וענוף קולהע צופעט
-                      למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק.
-                      תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם
-                      ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט
+                      DGW – דיגיטל וויב הינה חברה המתמחה בעיצוב ופיתוח אתרי
+                      אינטרנט ומערכות אינטרנט משולבות. ל- DGW יש יותר מ-15 שנות
+                      ניסיון במתן שירותי תכנות מקצועיים. סיימנו בהצלחה מאות
+                      פרוייקטים בהיקף ומורכבות משתנים בתחומים שונים של עסקים
+                      וטכנולוגיה.
+                      <br />
+                      <br />
+                      הצוות שלנו יעבוד איתך באופן אישי בכל שלב של הפרויקט ויישאר
+                      איתך זמן רב גם אחרי שהאתר יתחיל לפעול. כחברה המתמחה בעיצוב
+                      ופיתוח של אתרי אינטרנט ומערכות אינטרנט, המשימה שלנו לא
+                      נעצרת רק בכתיבת הקוד ופרסום הפרוייקט באינטרנט, אלא אנו
+                      ממשיכים לעבוד עם לקוחותינו, ומסייעים ביישום אסטרטגיות
+                      שיווק דרך מנועי החיפוש בטכניקות שיווק שהוכיחו את יכולתן
+                      לפתח נוכחות באינטרנט.
                     </div>
                   </div>
                 </div>
@@ -140,7 +142,10 @@ const About = () => {
                               עיצוב אתרים
                             </div>
                             <div className={styles.cardDesc}>
-                              <p>מעצבים לך אתר ברמה אחרת!</p>
+                              <p>
+                                אתר מעוצב ומפותח בצורה רספונסיבית התומכת בכל
+                                המחשבים והסמארטפונים.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -161,7 +166,10 @@ const About = () => {
                               בניית אתרים
                             </div>
                             <div className={styles.cardDesc}>
-                              <p>בונים אתר בדיוק לעסק שלך!</p>
+                              <p>
+                                בונים אתר בדיוק לעסק שלך, התהליך מלווה במשוב
+                                וייעוץ בזמן התכנון והפיתוח.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -174,39 +182,18 @@ const About = () => {
                           <div className={styles.cardContainerInsideBg}>
                             <div className={styles.cardIcon}>
                               <IconComponent
-                                name="briefcase"
+                                name="arrows-to-circle"
                                 type="fas"
                                 className=""
                               />
                             </div>
                             <div className={`${styles.cardTitle} text-sky-900`}>
-                              מיתוג עסקים
-                            </div>
-                            <div className={styles.cardDesc}>
-                              <p>נדאג גם לעסק שלך ולא רק לאתר!</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className={styles.cardContainer}>
-                        <div className={styles.cardContainerInside}>
-                          <div className={styles.cardContainerInsideBg}>
-                            <div className={styles.cardIcon}>
-                              <IconComponent
-                                name="plane-arrival"
-                                type="fas"
-                                className=""
-                              />
-                            </div>
-                            <div className={`${styles.cardTitle} text-sky-900`}>
-                              דפי נחיתה
+                              הלקוח במרכז
                             </div>
                             <div className={styles.cardDesc}>
                               <p>
-                                לבנתיים, נבנה לך דף נחיתה כדי שתתחיל לקבל
-                                חשיפות!
+                                שירותים איכותיים מובטחים לכל החיים. מנגנון עבודה
+                                ברור לכל פרויקט.
                               </p>
                             </div>
                           </div>
@@ -219,19 +206,40 @@ const About = () => {
                           <div className={styles.cardContainerInsideBg}>
                             <div className={styles.cardIcon}>
                               <IconComponent
-                                name="server"
+                                name="chart-line"
                                 type="fas"
                                 className=""
                               />
                             </div>
                             <div className={`${styles.cardTitle} text-sky-900`}>
-                              אחסון אתרים
+                              התקדמות מתמדת
                             </div>
                             <div className={styles.cardDesc}>
                               <p>
-                                ושלב לפני הסוף, מעלים את האתר לאוויר, מושיבים
-                                אותו על שרתי "המטוס" שלנו!
+                                אינטראקציה חלקה עם הקהל שלך וחשיפת ערכי החברה
+                                שלך לעולם.
                               </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className={styles.cardContainer}>
+                        <div className={styles.cardContainerInside}>
+                          <div className={styles.cardContainerInsideBg}>
+                            <div className={styles.cardIcon}>
+                              <IconComponent
+                                name="wand-magic-sparkles"
+                                type="fas"
+                                className=""
+                              />
+                            </div>
+                            <div className={`${styles.cardTitle} text-sky-900`}>
+                              טכנולוגיה מתקדמת
+                            </div>
+                            <div className={styles.cardDesc}>
+                              <p>פתרונות וטכנולוגיות מתקדמים במחירים נוחים.</p>
                             </div>
                           </div>
                         </div>
@@ -253,8 +261,8 @@ const About = () => {
                             </div>
                             <div className={styles.cardDesc}>
                               <p>
-                                מלווים את האתר שלך בגרסת ההפקה שלו, מדריכים אותך
-                                והופכים אותו לכוכב בתחום!
+                                תמיכה טכנית רציפה ע"י צוות ידידותי, מנוסה מאוד
+                                והכי חשוב, הם אוהבים את מה שהם עושים.
                               </p>
                             </div>
                           </div>
