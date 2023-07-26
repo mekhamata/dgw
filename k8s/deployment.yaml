@@ -22,7 +22,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: emailjs
-                  key: NEXT_PUBLIC_EMAILJS_PRIVATE
+                  key: emailjs_private
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
