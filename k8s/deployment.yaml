@@ -17,12 +17,6 @@ spec:
       containers:
         - name: dgw-k8s
           image: mikhamatta/dgw_k8s:latest
-          env:
-            - name: NEXT_PUBLIC_EMAILJS_PRIVATE
-              valueFrom:
-                secretKeyRef:
-                  name: emailjs
-                  key: emailjs_private
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
