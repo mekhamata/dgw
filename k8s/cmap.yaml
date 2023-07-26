@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nextjs-app-config
+data:
+  .env.local: |-
+    NEXT_PUBLIC_EMAILJS_PRIVATE=y9eqDlIW1ZnKzAxVt

@@ -20,17 +20,20 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-          env:
-            - name: NEXT_PUBLIC_EMAILJS_PRIVATE
-              valueFrom:
-                secretKeyRef:
-                  name: emailjs
-                  key: NEXT_PUBLIC_EMAILJS_PRIVATE
-          resources:
-            requests:
-              ephemeral-storage: "2Gi"
-            limits:
-              ephemeral-storage: "4Gi"
+      volumeMounts:
+        - name: nextjs-app-config
+          mountPath: "/frontend/.env.local"
+          subPath: ".env.local"
+          readOnly: true
+          volumes:
+            - name: nextjs-app-config
+              configMap:
+                name: nextjs-app-config
+              resources:
+                requests:
+                  ephemeral-storage: "2Gi"
+                limits:
+                  ephemeral-storage: "4Gi"
 ---
 apiVersion: v1
 kind: Service
