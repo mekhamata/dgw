@@ -4,10 +4,15 @@ WORKDIR /frontend
 
 COPY package*.json ./
 
-RUN npm build
+ARG npm_install_command=ci
+RUN npm $npm_install_command
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN npm run build
 RUN npm install
 
-COPY . .
+
 
 EXPOSE 3000
 
