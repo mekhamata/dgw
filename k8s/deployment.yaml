@@ -27,7 +27,7 @@ spec:
               ephemeral-storage: "4Gi"
           volumeMounts:
             - name: nextjs-app-config
-              mountPath: "/app/.env.local"
+              mountPath: "/frontend/.env.local"
               subPath: ".env.local"
               readOnly: true
       volumes:
