@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -23,6 +24,15 @@ export default function App({ Component, pageProps }: AppProps) {
         theme="dark"
       />
       <Footer />
+      {/* <Script id="">var uac_siteid="trKnu58fvvY=";</Script>
+
+      <Script
+        src="https://media.uaccess.co.il/Scripts/uaccess/web.js"
+        async={true}
+        id="uac-script-base"
+        strategy="lazyOnload"
+      /> */}
+      <Script src="/ac.js" />
     </>
   );
 }
