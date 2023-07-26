@@ -20,6 +20,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
+          env:
+            - name: NEXT_PUBLIC_EMAILJS_PRIVATE
+              valueFrom:
+                secretKeyRef:
+                  name: emailjs
+                  key: emailjs_private
           resources:
             requests:
               ephemeral-storage: "2Gi"
