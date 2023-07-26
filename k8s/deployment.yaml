@@ -17,7 +17,7 @@ spec:
       containers:
         - name: dgw-k8s
           image: mikhamatta/dgw_k8s:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           resources:
