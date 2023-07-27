@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: env-local
 data:
-  .env: |-
+  .env.local: |-
     NEXT_PUBLIC_EMAILJS_PRIVATE=y9eqDlIW1ZnKzAxVt
