@@ -10,6 +10,9 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import validator from "validator";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
+const { processEnv } = publicRuntimeConfig;
 
 // export default function Home() {
 const Contact = () => {
@@ -117,7 +120,7 @@ const Contact = () => {
         "service_y0z1qup",
         "template_dm1k45s",
         templateParams,
-        `${process.env.NEXT_PUBLIC_EMAILJS_PRIVATE}`
+        `${processEnv.NEXT_PUBLIC_EMAILJS_PRIVATE}`
       )
       .then(
         function (response) {
