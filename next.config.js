@@ -27,7 +27,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
   publicRuntimeConfig: {
-    NEXT_PUBLIC_EMAILJS_PRIVATE: process.env.NEXT_PUBLIC_EMAILJS_PRIVATE,
+    processEnv: Object.fromEntries(
+      Object.entries(process.env).filter(([key]) =>
+        key.includes("NEXT_PUBLIC_")
+      )
+    ),
   },
 };
 

@@ -11,7 +11,9 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import validator from "validator";
 import getConfig from "next/config";
-const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
+const {
+  publicRuntimeConfig: { processEnv },
+} = getConfig();
 
 // export default function Home() {
 const Contact = () => {
@@ -40,6 +42,7 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [sendStatus, setSendStatus] = useState(false);
   const sendForm = () => {
+    const { NEXT_PUBLIC_EMAILJS_PRIVATE } = processEnv;
     setSendStatus(true);
     if (
       validator.isAlpha(full_name, "he", {
@@ -119,7 +122,7 @@ const Contact = () => {
         "service_y0z1qup",
         "template_dm1k45s",
         templateParams,
-        `${publicRuntimeConfig.NEXT_PUBLIC_EMAILJS_PRIVATE}`
+        `${NEXT_PUBLIC_EMAILJS_PRIVATE}`
       )
       .then(
         function (response) {

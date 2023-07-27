@@ -1,13 +1,15 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
+import type { AppContext, AppProps } from "next/app";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
+import { NextPage, NextPageContext } from "next";
+import App from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
@@ -36,3 +38,12 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+interface Context extends NextPageContext {
+  // any modifications to the default context, e.g. query types
+}
+MyApp.getInitialProps = async (appContext: AppContext) => {
+  // ...
+  const appProps = await App.getInitialProps(appContext);
+  return { ...appProps };
+};
+export default MyApp;
