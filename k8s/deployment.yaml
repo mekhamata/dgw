@@ -20,20 +20,24 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-          env:
-            # Define the environment variable
-            - name: NEXT_PUBLIC_EMAILJS_PRIVATE
-              valueFrom:
-                configMapKeyRef:
-                  # The ConfigMap containing the value you want to assign to SPECIAL_LEVEL_KEY
-                  name: env-local
-                  # Specify the key associated with the value
-                  key: emailjs_pri
+          volumeMounts:
+            - mountPath: /frontend/.env.local
+              name: env-local
+              readOnly: true
+              subPath: .env.local
           resources:
             requests:
               ephemeral-storage: "2Gi"
             limits:
               ephemeral-storage: "4Gi"
+      volumes:
+        - configMap:
+            defaultMode: 420
+            items:
+              - key: .env
+                path: .env.local
+            name: env-local
+          name: env-local
 ---
 apiVersion: v1
 kind: Service
